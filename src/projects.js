@@ -112,12 +112,72 @@ export const projects = [
     decisions: [['01', 'Make the morning visible', 'The sunburst gives the name an immediate visual link to a new day.'], ['02', 'Use colour as a cue', 'Cobalt provides a distinctive field for the warmer apricot accent.'], ['03', 'Build a repeatable system', 'The same symbol, rays, and type arrangement work across large and small formats.']],
     palette: ['#262b86', '#f6eee0', '#f3a363', '#151632'],
     outcome: 'A self-initiated visual identity concept for a fictional coffee label, presented with editable vector-style applications. No production packaging or client launch is implied.'
+  },
+  {
+    id: 'stillform', name: 'Stillform', subtitle: 'Objects with room to breathe.', category: 'branding', discipline: 'VISUAL IDENTITY · CERAMICS', showcase: 'THE IDENTITY',
+    showcaseTitle: 'A mark shaped by the handmade.', showcaseText: 'An open-circle symbol, quiet wordmark, and clay-led palette move from object label to wrapping and studio card.',
+    intro: 'A restrained identity for an imagined ceramics studio, shaped around the imperfect circles and gentle textures of handmade objects.',
+    brief: 'Give a small ceramics studio an identity that feels considered on packaging, in a studio setting, and in a digital shop.',
+    challenge: 'Handmade work carries its own character. The identity needs to support the objects without overpowering their shapes and surfaces.',
+    approach: 'An open, irregular circle acts as a maker’s stamp. Soft editorial type and warm earth colours provide a consistent frame across applications.',
+    deliverables: ['Wordmark and maker’s mark', 'Colour and typography direction', 'Wrapping and label concepts', 'Studio card and social tile'],
+    decisions: [['01', 'Leave the circle open', 'The gap in the mark suggests the human variation of a hand-thrown form.'], ['02', 'Let the material lead', 'Chalk, clay, and charcoal tones sit comfortably beside natural ceramics.'], ['03', 'Use a quiet hierarchy', 'Generous space and small supporting type make product details easy to find.']],
+    palette: ['#ebe5d9', '#b47a61', '#423f38', '#d4c5ad'],
+    outcome: 'A self-initiated identity system for a fictional ceramics studio. Packaging and stationery are visual concepts, not production files.'
+  },
+  {
+    id: 'fieldnote', name: 'Fieldnote', subtitle: 'Take the long way outside.', category: 'branding', discipline: 'VISUAL IDENTITY · OUTDOOR GOODS', showcase: 'THE IDENTITY',
+    showcaseTitle: 'A trail-ready visual language.', showcaseText: 'A directional monogram, route lines, and high-contrast colour form a system for tags, equipment, and field guides.',
+    intro: 'An energetic identity for an imagined outdoor essentials brand, with a compass-inspired mark and a modular trail graphic.',
+    brief: 'Create a practical, recognisable identity for everyday outdoor gear that can work on a small woven label and a large campaign graphic.',
+    challenge: 'Adventure brands often rely on familiar mountain silhouettes. This direction needs a distinct mark that stays legible at small sizes.',
+    approach: 'A bold F-shaped path turns into a simple directional symbol. An orange signal colour cuts through deep green and off-white fields.',
+    deliverables: ['Directional symbol and wordmark', 'Colour and type direction', 'Equipment tag and label concepts', 'Field guide and social applications'],
+    decisions: [['01', 'Turn a path into a mark', 'The angled line gives the initial a sense of direction without adding fine detail.'], ['02', 'Build for contrast', 'Signal orange makes key information visible against pine green.'], ['03', 'Repeat the route', 'The trail line can frame photography, maps, or compact product labels.']],
+    palette: ['#173c35', '#f36b3f', '#f1eedf', '#a5b7a1'],
+    outcome: 'A self-initiated identity concept for a fictional outdoor brand. The equipment and printed pieces are visual mockups.'
+  },
+  {
+    id: 'goodhour', name: 'The Good Hour', subtitle: 'Make space for a small pause.', category: 'social', discipline: 'SOCIAL MEDIA · WELLNESS CAMPAIGN', showcase: 'THE SERIES',
+    showcaseTitle: 'A pause that reads at a glance.', showcaseText: 'Three square feed posts balance a large daily prompt, a simple ritual, and a saved-for-later checklist.',
+    intro: 'A three-post social series for an imagined wellbeing brand, using generous type and gentle colour to make daily rituals feel approachable.',
+    brief: 'Design a saveable social series that invites a short break during a busy day and keeps the action simple enough to try immediately.',
+    challenge: 'Wellness messages can become vague. Each post needs a clear, useful prompt that works when someone sees it quickly in a feed.',
+    approach: 'Oversized editorial headlines pair with one action per post. A recurring clock motif and warm pink and plum palette connect the series.',
+    deliverables: ['Three square feed posts', 'Recurring campaign motif', 'Type and colour system', 'Caption direction'],
+    decisions: [['01', 'Lead with the action', 'Each opening line tells the viewer what to do in a few words.'], ['02', 'Keep it saveable', 'The final card collects three prompts in one easy reference.'], ['03', 'Make the series recognisable', 'The circular clock motif repeats without taking attention from the message.']],
+    palette: ['#f7d6cb', '#54364f', '#f6efe8', '#dc806f'],
+    outcome: 'Three self-initiated social post concepts for a fictional wellbeing brand. They are static design studies, with no claimed reach or engagement.'
+  },
+  {
+    id: 'afterhours', name: 'After Hours', subtitle: 'An evening worth showing up for.', category: 'social', discipline: 'SOCIAL MEDIA · EVENT CAMPAIGN', showcase: 'THE SERIES',
+    showcaseTitle: 'One night, three reasons to come.', showcaseText: 'A launch announcement, line-up reveal, and final reminder use a shared grid and neon signal to build momentum.',
+    intro: 'A bold three-post launch series for an imagined music night, built from compressed typography, a glowing disc, and a tight event-information grid.',
+    brief: 'Introduce a new late-night music event through a sequence of posts that remains readable and recognisable on mobile.',
+    challenge: 'The campaign needs atmosphere, but the event name, time, and booking cue must still be quick to find.',
+    approach: 'A dark field makes acid yellow and lilac typography feel electric. The circular disc repeats as a visual anchor while the message changes.',
+    deliverables: ['Launch announcement tile', 'Line-up reveal tile', 'Last-call reminder tile', 'Reusable event type system'],
+    decisions: [['01', 'Make the date unmissable', 'The date block stays in the same place through the series.'], ['02', 'Use one visual anchor', 'The disc supplies energy without needing new imagery for each post.'], ['03', 'Change the message, keep the grid', 'A familiar layout lets viewers recognise the series as new details arrive.']],
+    palette: ['#17142e', '#e9f55d', '#b6a5ec', '#f4f1e9'],
+    outcome: 'A self-initiated social campaign for a fictional event. Names, line-up, and booking prompts are illustrative.'
+  },
+  {
+    id: 'freshcut', name: 'Fresh Cut', subtitle: 'Good food, straight to the point.', category: 'social', discipline: 'SOCIAL MEDIA · FOOD CONTENT', showcase: 'THE SERIES',
+    showcaseTitle: 'A recipe story in three beats.', showcaseText: 'An ingredient-led opener, a quick method card, and a final serving suggestion make the sequence useful as well as appetising.',
+    intro: 'A punchy three-post recipe series for an imagined food channel, combining graphic ingredients, bold type, and practical cooking steps.',
+    brief: 'Create a social series that makes a simple citrus salad feel easy to cook and satisfying to share.',
+    challenge: 'Recipe posts need to create appetite while communicating ingredients and method in a tiny space.',
+    approach: 'Oversized citrus shapes and confident green typography create a consistent look. Each post answers one question: what, how, and how to serve.',
+    deliverables: ['Ingredient opener', 'Method card', 'Serving card', 'Reusable recipe template'],
+    decisions: [['01', 'Give the ingredient a starring role', 'Large sliced citrus forms communicate the flavour before the copy is read.'], ['02', 'Limit each card to one job', 'Ingredients, steps, and serving notes each get a dedicated frame.'], ['03', 'Use colour for continuity', 'Lime, cream, and tomato red make the series easy to recognise in a feed.']],
+    palette: ['#dbe884', '#205544', '#f6f0dc', '#ea694e'],
+    outcome: 'Three self-initiated social post concepts for a fictional food channel. The recipe text is illustrative and has not been kitchen tested.'
   }
 ];
 
-// Lead with the logo collection and the visual identity project.
-const featuredProjects = new Map([['logofolio', 0], ['morrow', 1]]);
-projects.sort((a, b) => (featuredProjects.get(a.id) ?? 2) - (featuredProjects.get(b.id) ?? 2));
+// Lead with logo and visual identity work, then show the social series together.
+const featuredProjects = new Map([['logofolio', 0], ['morrow', 1], ['stillform', 2], ['fieldnote', 3]]);
+projects.sort((a, b) => (featuredProjects.get(a.id) ?? 4) - (featuredProjects.get(b.id) ?? 4));
 projects.forEach((project, index) => { project.number = String(index + 1).padStart(2, '0'); });
 
 export const landscape = `<svg viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#bfd5cb"/><stop offset="1" stop-color="#f0d9b3"/></linearGradient></defs><path fill="url(#sky)" d="M0 0h500v360H0z"/><circle cx="376" cy="90" r="35" fill="#f7e8c9"/><path d="M0 234 99 119 180 214 285 83 440 249 500 174v186H0" fill="#8da998"/><path d="m0 306 150-140 100 100L366 160l134 114v86H0" fill="#577d70"/><path d="m0 315 128-75 128 92 110-81 134 56v53H0" fill="#294f43"/><path d="m312 245-16 22 40 23-59 25 10 45h44l-28-42 58-31-39-25 4-17" fill="#cdd7b3"/></svg>`;
@@ -135,10 +195,20 @@ const logoMarks = [
 ];
 export function logoVisual() { return `<div class="project-art logo-art"><div class="logo-board">${logoMarks.map(([style, mark, name, line]) => `<div class="logo-tile logo-${style}"><span class="logo-symbol" aria-hidden="true">${mark}</span><strong>${name}</strong><small>${line}</small></div>`).join('')}</div></div>`; }
 export function morrowVisual() { return `<div class="project-art morrow-art"><div class="morrow-board"><div class="morrow-tile morrow-wordmark"><span class="morrow-sun" aria-hidden="true">✳</span><strong>morrow<span>.</span></strong><small>GOOD DAYS START HERE / COFFEE CO.</small></div><div class="morrow-tile morrow-seal"><span>GOOD<br>DAYS<br>START<br>HERE.</span><i aria-hidden="true">✳</i></div><div class="morrow-tile morrow-pattern" aria-label="Repeating sunrise symbol pattern"><span>✳ ✳ ✳ ✳<br>✳ ✳ ✳ ✳<br>✳ ✳ ✳ ✳</span></div><div class="morrow-tile morrow-packaging"><div class="coffee-bag"><span>✳</span><strong>morrow.</strong><small>EVERYDAY BLEND<br>WHOLE BEAN COFFEE / 250G</small></div><div class="coffee-cup"><span>✳</span><strong>morrow.</strong></div></div><div class="morrow-tile morrow-card"><span>HELLO,<br>MORNING.</span><strong>morrow.</strong><small>YOUR DAILY CUP OF POSSIBLE.</small></div><div class="morrow-tile morrow-colours"><span style="background:#262b86"></span><span style="background:#f6eee0"></span><span style="background:#f3a363"></span><span style="background:#151632"></span></div></div></div>`; }
+export function stillformVisual() { return `<div class="project-art concept-board stillform-board" role="img" aria-label="Stillform ceramics identity board with maker mark, wrapping, product label, and colour samples"><div class="stillform-main"><span class="stillform-ring" aria-hidden="true"></span><strong>stillform<span>®</span></strong><small>OBJECTS FOR SLOWER LIVING</small></div><div class="stillform-stamp"><span class="stillform-ring" aria-hidden="true"></span><strong>MADE BY HAND<br>MADE TO STAY</strong></div><div class="stillform-wrap"><div class="stillform-package"><span class="stillform-ring" aria-hidden="true"></span><strong>stillform</strong><small>STONEWARE / OBJECT NO. 01</small></div><span>EVERYDAY OBJECTS<br>WITH A HUMAN TOUCH.</span></div><div class="stillform-label"><strong>01 / vessel</strong><small>Hand-thrown stoneware<br>Made slowly, kept forever.</small><span>stillform / studio objects</span></div></div>`; }
+export function fieldnoteVisual() { return `<div class="project-art concept-board fieldnote-board" role="img" aria-label="Fieldnote outdoor identity board with directional mark, equipment tag, field guide, and route pattern"><div class="fieldnote-main"><span class="fieldnote-mark" aria-hidden="true">↗</span><strong>fieldnote<span>.</span></strong><small>TAKE THE LONG WAY OUTSIDE</small></div><div class="fieldnote-signal"><strong>GO<br>FARTHER.</strong><span>01 / FIND YOUR ROUTE</span></div><div class="fieldnote-gear"><div class="fieldnote-tag"><span>↗</span><strong>fieldnote.</strong><small>OUTDOOR ESSENTIALS<br>BUILT FOR THE WAY OUT</small></div><div class="fieldnote-guide"><small>FIELD GUIDE / 01</small><strong>THE<br>LONG<br>WAY.</strong><span>↗</span></div></div><div class="fieldnote-route"><span aria-hidden="true">╱╲╱╲╱╲</span><small>PACK LIGHT / GO FURTHER</small></div></div>`; }
+export function goodhourVisual() { return `<div class="project-art social-board goodhour-board" role="img" aria-label="The Good Hour three-post wellness series: take a breath, a two-minute reset, and three gentle reminders"><div class="social-tile goodhour-one"><small>THE GOOD HOUR / 01</small><span class="goodhour-clock" aria-hidden="true">◷</span><strong>take a<br><em>breath.</em></strong><span>GIVE YOURSELF ONE QUIET MINUTE.</span></div><div class="social-tile goodhour-two"><small>A SMALL DAILY RITUAL / 02</small><strong>2 MINUTES<br>TO RESET.</strong><div class="goodhour-steps"><span>01&nbsp; UNCLENCH YOUR JAW</span><span>02&nbsp; DROP YOUR SHOULDERS</span><span>03&nbsp; BREATHE OUT SLOWLY</span></div><span class="goodhour-arc" aria-hidden="true"></span></div><div class="social-tile goodhour-three"><small>SAVE THIS FOR LATER / 03</small><strong>little<br>pauses,<br><em>big difference.</em></strong><span>STRETCH · SIP · STEP OUTSIDE</span><b>the good hour ✳</b></div></div>`; }
+export function afterhoursVisual() { return `<div class="project-art social-board afterhours-board" role="img" aria-label="After Hours three-post event campaign: announcement, line-up, and final reminder"><div class="social-tile afterhours-one"><small>FRIDAY / 8 PM — LATE</small><span class="afterhours-disc" aria-hidden="true"></span><strong>AFTER<br>HOURS</strong><span>GOOD MUSIC. NO EARLY NIGHTS.</span></div><div class="social-tile afterhours-two"><small>THE SOUND / 02</small><strong>LOUDER<br>TOGETHER.</strong><div class="afterhours-lineup">DJ NOVA<br>THE VIOLET SET<br>ROOM TWO RADIO</div><span>ONE NIGHT / TWO ROOMS</span></div><div class="social-tile afterhours-three"><small>THIS FRIDAY / 03</small><strong>LAST<br>CALL<span>↗</span></strong><div class="afterhours-ticket">FRI 23 OCT<br>DOORS 20:00<br>AFTER HOURS / CONCEPT EVENT</div><span>THE NIGHT IS YOURS.</span></div></div>`; }
+export function freshcutVisual() { return `<div class="project-art social-board freshcut-board" role="img" aria-label="Fresh Cut three-post citrus salad recipe series showing ingredients, quick method, and serving idea"><div class="social-tile freshcut-one"><small>FRESH CUT / THE GOOD STUFF</small><span class="freshcut-fruit" aria-hidden="true"></span><strong>BIG<br>ON ZEST.</strong><span>THE FIVE-MINUTE CITRUS SALAD</span></div><div class="social-tile freshcut-two"><small>RECIPE CARD / 02</small><strong>SLICE.<br>TOSS.<br>DONE.</strong><div class="freshcut-list">CITRUS + FENNEL<br>OLIVE OIL + MINT<br>A LITTLE SEA SALT</div><span>FRESH CUT / EASY DOES IT</span></div><div class="social-tile freshcut-three"><small>THE FINISH / 03</small><span class="freshcut-plate" aria-hidden="true"></span><strong>SERVE IT<br>BRIGHT.</strong><span>ADD MINT. SHARE GENEROUSLY.</span></div></div>`; }
 export function projectVisual(id) {
   const project = projects.find(item => item.id === id);
   if (id === 'logofolio') return logoVisual();
   if (id === 'morrow') return morrowVisual();
+  if (id === 'stillform') return stillformVisual();
+  if (id === 'fieldnote') return fieldnoteVisual();
+  if (id === 'goodhour') return goodhourVisual();
+  if (id === 'afterhours') return afterhoursVisual();
+  if (id === 'freshcut') return freshcutVisual();
   if (project?.cover) {
     if (id === 'careconnect') return `<div class="project-art real-project-art real-project-careconnect"><img src="${project.cover}" alt="${project.coverAlt}" loading="lazy"/></div>`;
     if (id === 'progelato') return `<div class="project-art real-project-art real-project-progelato"><img src="${project.cover}" alt="${project.coverAlt}" loading="lazy"/></div>`;

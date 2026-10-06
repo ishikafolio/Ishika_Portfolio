@@ -5,17 +5,21 @@ test('portfolio loads without errors, filters work and resume is downloadable', 
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
   await expect(page.getByRole('heading', {name:'PORTFOLIO'})).toBeVisible();
-  await expect(page.locator('.project-card:visible')).toHaveCount(10);
+  await expect(page.locator('.project-card:visible')).toHaveCount(15);
   await expect(page.locator('.project-card:visible').first()).toContainText('01 / DESIGN CONCEPT');
   await expect(page.locator('.project-card:visible').first()).toContainText('Logo Folio');
   await expect(page.locator('.project-card:visible').nth(1)).toContainText('Morrow Coffee');
   await page.getByRole('button', {name:'UI/UX design'}).click();
   await expect(page.locator('.project-card:visible')).toHaveCount(3);
   await page.getByRole('button', {name:'Brand identity'}).click();
-  await expect(page.locator('.project-card:visible')).toHaveCount(4);
+  await expect(page.locator('.project-card:visible')).toHaveCount(6);
   await expect(page.locator('.project-card:visible').first()).toContainText('Logo Folio');
   await expect(page.locator('.project-card:visible').nth(1)).toContainText('Morrow Coffee');
-  await expect(page.locator('.project-card:visible').nth(2)).toContainText('Eunoia Designtech');
+  await expect(page.locator('.project-card:visible').nth(2)).toContainText('Stillform');
+  await expect(page.locator('.project-card:visible').nth(3)).toContainText('Fieldnote');
+  await page.getByRole('button', {name:'Social media'}).click();
+  await expect(page.locator('.project-card:visible')).toHaveCount(3);
+  await expect(page.locator('.project-card:visible')).toContainText(['The Good Hour', 'After Hours', 'Fresh Cut']);
   await page.getByRole('button', {name:'Packaging'}).click();
   await expect(page.locator('.project-card:visible')).toHaveCount(1);
   await expect(page.locator('.project-card:visible').first()).toContainText('No Cheat Progelato');
@@ -23,7 +27,7 @@ test('portfolio loads without errors, filters work and resume is downloadable', 
   await expect(page.locator('.project-card:visible')).toHaveCount(2);
   await expect(page.locator('.project-card:visible').first()).toContainText('ProPeri Campaign');
   await page.getByRole('button', {name:'All work'}).click();
-  await expect(page.locator('.project-card:visible')).toHaveCount(10);
+  await expect(page.locator('.project-card:visible')).toHaveCount(15);
   const cv = await request.get('/Ishika_Shrivastav_CV.pdf');
   expect(cv.ok()).toBeTruthy();
   expect(cv.headers()['content-type']).toContain('application/pdf');
@@ -86,7 +90,7 @@ test('mobile navigation, all case studies and page fit the viewport', async ({pa
   await page.getByRole('navigation',{name:'Mobile navigation'}).getByRole('link',{name:'About',exact:true}).click();
   await expect(page.getByRole('navigation',{name:'Mobile navigation'})).not.toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBeTruthy();
-  for(const name of ['CareConnect','No Cheat Progelato','Eunoia Designtech','ProPeri Campaign','Roam','Aara','Folio','Rang','Logo Folio','Morrow Coffee']){
+  for(const name of ['CareConnect','No Cheat Progelato','Eunoia Designtech','ProPeri Campaign','Roam','Aara','Folio','Rang','Logo Folio','Morrow Coffee','Stillform','Fieldnote','The Good Hour','After Hours','Fresh Cut']){
     await page.getByRole('button',{name:`View ${name} case study`}).click();
     await expect(page.locator('#case-title')).toContainText(name);
     expect(await page.locator('dialog').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();

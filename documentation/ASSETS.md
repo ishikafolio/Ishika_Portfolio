@@ -28,4 +28,4 @@ Use case: product-mockup. Asset type: portfolio concept project visual for a fic
 
 ## Other project art
 
-Roam and Folio presentation interfaces, geometric landscape illustration, fictional book covers, Rang campaign, Logo Folio marks, Morrow Coffee visual identity, favicon, and personal wordmark are editable HTML/CSS/SVG in the repository. Logo Folio and Morrow Coffee are self-initiated fictional concepts. No external image service is needed at runtime. Fonts are served locally from the Fontsource packages; their license files remain in the respective packages.
+Roam and Folio presentation interfaces, geometric landscape illustration, fictional book covers, Rang campaign, Logo Folio marks, Morrow Coffee, Stillform, and Fieldnote visual identities, The Good Hour, After Hours, and Fresh Cut social series, favicon, and personal wordmark are editable HTML/CSS/SVG in the repository. The additional identity and social projects are self-initiated fictional concepts. No external image service is needed at runtime. Fonts are served locally from the Fontsource packages; their license files remain in the respective packages.
