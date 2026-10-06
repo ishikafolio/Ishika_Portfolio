@@ -4,8 +4,15 @@ test('portfolio loads without errors, filters work and resume is downloadable', 
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
-  await expect(page.getByRole('heading', {name:'PORTFOLIO'})).toBeVisible();
+  await expect(page.locator('#hero-title')).toContainText('Shrivastav');
   await expect(page.locator('.project-card:visible')).toHaveCount(15);
+  await expect(page.locator('.project-card').first()).toHaveAttribute('data-reveal-direction','left');
+  await expect(page.locator('.project-card').nth(1)).toHaveAttribute('data-reveal-direction','right');
+  const revealAnimations = await page.locator('.project-card').evaluateAll(cards => cards.slice(0, 2).map(card => {
+    card.classList.add('motion-in');
+    return getComputedStyle(card.querySelector('.project-open')).animationName;
+  }));
+  expect(revealAnimations).toEqual(['project-uncover', 'project-uncover-reverse']);
   await expect(page.locator('.project-card:visible').first()).toContainText('01 / DESIGN CONCEPT');
   await expect(page.locator('.project-card:visible').first()).toContainText('Logo Folio');
   await expect(page.locator('.project-card:visible').nth(1)).toContainText('Morrow Coffee');
@@ -20,6 +27,8 @@ test('portfolio loads without errors, filters work and resume is downloadable', 
   await page.getByRole('button', {name:'Social media'}).click();
   await expect(page.locator('.project-card:visible')).toHaveCount(3);
   await expect(page.locator('.project-card:visible')).toContainText(['The Good Hour', 'After Hours', 'Fresh Cut']);
+  await expect(page.locator('.project-card:visible').first()).toHaveAttribute('data-reveal-direction','left');
+  await expect(page.locator('.project-card:visible').nth(1)).toHaveAttribute('data-reveal-direction','right');
   await page.getByRole('button', {name:'Packaging'}).click();
   await expect(page.locator('.project-card:visible')).toHaveCount(1);
   await expect(page.locator('.project-card:visible').first()).toContainText('No Cheat Progelato');
@@ -32,7 +41,7 @@ test('portfolio loads without errors, filters work and resume is downloadable', 
   expect(cv.ok()).toBeTruthy();
   expect(cv.headers()['content-type']).toContain('application/pdf');
   for(const img of await page.locator('img').all()) {
-    await img.scrollIntoViewIfNeeded();
+    await img.evaluate(el => {el.loading = 'eager';});
     await expect.poll(() => img.evaluate(el=>el.complete && el.naturalWidth>0)).toBeTruthy();
   }
   expect(errors).toEqual([]);
@@ -98,6 +107,25 @@ test('mobile navigation, all case studies and page fit the viewport', async ({pa
   }
 });
 
+test('sheet character animates, changes expression and respects reduced motion', async ({page}) => {
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto('/');
+  await expect(page.locator('.hero-character')).toBeVisible();
+  await expect.poll(() => page.locator('.anime-character-image').evaluate(img => img.complete && img.naturalWidth > 0)).toBeTruthy();
+  expect(await page.locator('.anime-character-image').evaluate(el => getComputedStyle(el).animationName)).toContain('character-bob');
+  await page.getByRole('button',{name:'Change character expression; currently happy'}).click();
+  await expect(page.locator('.anime-mood')).toHaveAttribute('data-expression','thoughtful');
+  await expect(page.locator('.hero-composition')).toHaveAttribute('data-expression','thoughtful');
+  await expect(page.locator('.anime-emotion')).toHaveText('what if... ✳');
+  await expect(page.locator('.about-character-cameo')).toHaveCount(1);
+  await expect(page.locator('.contact-character-cameo')).toHaveCount(1);
+  await expect(page.getByRole('button',{name:'Change character expression; currently thoughtful'})).toBeVisible();
+  await page.emulateMedia({reducedMotion:'reduce'});
+  expect(await page.locator('.anime-character-image').evaluate(el => getComputedStyle(el).animationName)).toBe('none');
+  await expect(page.locator('#hero-title')).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
+});
+
 test('supplied artwork galleries show every prepared project image', async ({page}) => {
   await page.goto('/');
   for (const [name, count] of [['CareConnect', 10], ['No Cheat Progelato', 7], ['Eunoia Designtech', 5], ['ProPeri Campaign', 4]]) {
@@ -127,6 +155,18 @@ test('screenshots of desktop and mobile layouts', async ({page})=>{
   await expect.poll(() => page.locator('.project-card img').evaluateAll(images => images.every(img => img.complete && img.naturalWidth > 0))).toBeTruthy();
   await page.screenshot({path:'artifacts/desktop.png',fullPage:true});
   await page.screenshot({path:'artifacts/hero-desktop.png'});
+  await page.locator('#about').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(900);
+  await page.locator('#about').screenshot({path:'artifacts/about-desktop.png'});
+  await page.locator('#contact').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(900);
+  await page.locator('#contact').screenshot({path:'artifacts/contact-desktop.png'});
   await page.setViewportSize({width:390,height:844});
+  await page.goto('/');
+  await page.evaluate(() => document.fonts.ready);
+  await page.locator('.anime-character-image').evaluate(img => img.decode());
+  await page.locator('.hero-character').evaluate(el => Promise.all(el.getAnimations().map(animation => animation.finished)));
+  await page.locator('.hero-composition h1').evaluate(el => Promise.all(el.getAnimations().map(animation => animation.finished)));
+  await page.screenshot({path:'artifacts/hero-mobile.png'});
   await page.screenshot({path:'artifacts/mobile.png',fullPage:true});
 });

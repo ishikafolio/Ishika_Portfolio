@@ -22,6 +22,7 @@ The production website is generated in `dist/`. It can be hosted on any static w
 ## Included
 
 - Editorial hero, responsive navigation, selected work, background and experience, design process, and contact sections.
+- Large anime character derived from the supplied sheet in the hero, with gentle pose changes, an expression card, and small cameos in About and Contact. Project images reveal in alternating directions, with reduced-motion support.
 - Four supplied project collections: **CareConnect** mobile UI, **No Cheat Progelato** packaging, **Eunoia Designtech** graphics, and the **ProPeri** social carousel. Their galleries show the artwork from `Projects/`. CareConnect includes all ten screens and a link to the supplied interactive prototype.
 - Eleven original concept projects: **Roam** (travel app), **Aara** (tea brand), **Folio** (reading web app), **Rang** (arts festival campaign), **Logo Folio** (six logo directions), **Morrow Coffee**, **Stillform**, and **Fieldnote** (visual identities), plus **The Good Hour**, **After Hours**, and **Fresh Cut** (three-post social series).
 - Category filters and keyboard-accessible case-study dialogs with shareable `#project/<id>` links.

@@ -1,5 +1,15 @@
 # Generated artwork
 
+## Anime hero character
+
+Source: `Anime Character Sheet_ Confident Creative Woman.png`, supplied in the workspace.
+
+Website assets: `public/assets/anime-character-sheet.png` (unchanged source sheet for the expression card and About and Contact cameos) and `public/assets/anime-character-cutout.png` (transparent hero cutout). The original cutout is archived at `documentation/original-assets/anime-character-cutout.png`. The cutout was edited with the built-in image generation tool from the sheet. Expression crops, pose changes, and animation are implemented in CSS and JavaScript.
+
+### Cutout prompt
+
+Use case: background-extraction. Isolate the smiling three-quarter-view woman from the supplied sheet, preserving her glasses, wavy black hair, dark sleeveless top, belt, white trousers, facial features, proportions, and illustration style. Frame from hair to upper thighs, remove all page elements and background, and output genuine transparency with clean edges and no glow or text.
+
 Created with the built-in image generation tool. The supplied screenshots were used for visual direction; their artwork and the reference designer’s portrait were not copied into the website. The current visual direction follows `inspiration/Inspiration_2`.
 
 ## Botanical hero
